@@ -1,0 +1,5 @@
+# Ignorar arquivos temporários e scratch
+scratch/
+.system_generated/
+*.tmp
+*.log

@@ -1,0 +1,59 @@
+! Title: Filtros Pessoais Unificados (uBlock Origin Lite)
+! Description: Lista única e consolidada de regras para todos os sites suportados pelo projeto
+! Homepage: https://github.com/jhojhocraazy/ubo-lite-tampermonkey-personal-filter
+! Expires: 7 days
+
+! =============================================================================
+! 1. MULTICANAIS DELIVERY & SPORTURBO
+! =============================================================================
+! Armadilhas do Player
+multicanais.*###ad-gate
+sporturbo.link###tvlt
+sporturbo.link##.embed-button
+sporturbo.link##[class*="tvlt-"]
+
+! Bloqueio de scripts de anúncios, popunders e telemetria
+||sporturbo.link/tcv-lt.js*
+||sporturbo.link/lt.min.js*
+||futeblox.com^
+||devtools.js^
+||devtools-detector.js^
+||cdn.jsdelivr.net/npm/disable-devtool^
+||acscdn.com^
+||xtudoplay.com^
+||multicanais.*/assets/keepon.js*
+||multicanais.*/api/keepon.php*
+
+! Botões, banners flutuantes e modais
+multicanais.*##div.fbxp-ov.on
+multicanais.*##.fbxp-ov
+multicanais.*##.doodle
+multicanais.*###fbxd-mount
+multicanais.*###fbxd-tpl
+multicanais.*###downloadFloat
+multicanais.*###hntvBanner
+multicanais.*###mcBanner
+multicanais.*###fbx-rec
+multicanais.*##.agx-root
+multicanais.*##span.wrap
+multicanais.*###fmcta
+
+! =============================================================================
+! 2. MULTICANAIS HD (DEZPILA REMOVER)
+! =============================================================================
+! Popunders externos e rastreadores
+||ryedebauch.com^
+||waust.at^
+||dezpila.press^
+
+! Popups forçados, topbar e banners IPTV Dezpila
+multicanaishd.*###overlay-banner
+multicanaishd.*###iptv-float
+multicanaishd.*###iptv-topbar
+multicanaishd.*##.iptv-hero
+multicanaishd.*##.dezpila-ad-section
+multicanaishd.*##.dezpila-banner-link
+multicanaishd.*##.dezpila-banner-img
+multicanaishd.*##.dezpila-disclaimer
+multicanaishd.*##a[href*="dezpila.press"]
+multicanaishd.*###alert
